@@ -1,0 +1,1 @@
+This project is a simple simulation of LINQ in C#. It demonstrates how LINQ-like methods such as Where, Take, and All can be implemented from scratch. The goal is to provide a deeper understanding …
