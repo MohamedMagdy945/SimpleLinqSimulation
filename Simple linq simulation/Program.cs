@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using ConsoleApp3;
+using static ConsoleApp3.link;
 namespace App
 {
     class program
@@ -11,10 +11,10 @@ namespace App
         {
             var MDS = new MyDataStructure<int>();
             MDS.array = new int[]{ 4 , 5 ,6 ,7 ,2 ,1 , 21, 11 , 15 ,3 , 4 ,5 };
-            var Filter = link.Where(MDS, value => value > 4);
-            var Filter2 = link.Take(Filter, 5);
+
+            var Filter = MDS.Where(value => value > 4).Take(4);
             
-            var EE = Filter2.GetEnumerator();
+            var EE = Filter.GetEnumerator();
             while (EE.MoveNext())
             {
                 Console.Write($"{ EE.Current} ,"); //    5, 6 ,7 ,21 , 11 ,

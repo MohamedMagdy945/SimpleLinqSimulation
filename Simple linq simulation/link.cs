@@ -5,10 +5,10 @@ using System.Collections.Generic;
 namespace ConsoleApp3
 {
     delegate bool MyDel<T>(T x);
-    internal class link
+    internal static class link
     {
 
-        public static IEnumerable<T> Where<T>(IEnumerable<T> source, MyDel<T> D)
+        public static IEnumerable<T> Where<T>(this IEnumerable<T> source, MyDel<T> D)
         {
             return new WhereIEnumerable<T>(source, D);
         }
@@ -72,7 +72,7 @@ namespace ConsoleApp3
         }
 
 
-        public static IEnumerable<T> Take<T>(IEnumerable<T> source,int value)
+        public static IEnumerable<T> Take<T>(this IEnumerable<T> source,int value)
         {
             return new TakeIEnumerable<T>(source, value);
         }
