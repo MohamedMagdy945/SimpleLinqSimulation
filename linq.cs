@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace ConsoleApp3
 {
     delegate bool MyDel<T>(T x);
-    internal static class link
+    internal static class LinqSimulation
     {
 
         public static IEnumerable<T> Where<T>(this IEnumerable<T> source, MyDel<T> D)
@@ -118,13 +118,11 @@ namespace ConsoleApp3
                     {
                         return false;
                     }
-
                     if (_enumerator.MoveNext())
                     {
                         _taken++;
                         return true;
                     }
-
                     return false;
                 }
 
