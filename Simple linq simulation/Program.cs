@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using ConsoleApp3;
-using static ConsoleApp3.link;
 namespace App
 {
     class program
@@ -17,7 +16,7 @@ namespace App
             var EE = Filter.GetEnumerator();
             while (EE.MoveNext())
             {
-                Console.Write($"{ EE.Current} ,"); //    5, 6 ,7 ,21 , 11 ,
+                Console.Write($"{ EE.Current} ,"); //    5, 6 ,7 ,21 ,
             }       
         }
     }
